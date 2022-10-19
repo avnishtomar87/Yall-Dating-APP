@@ -1,0 +1,3318 @@
+{
+	"info": {
+		"_postman_id": "a5718b1c-3a59-4dd8-8c42-218f5f0f0746",
+		"name": "Yall_App_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16396568"
+	},
+	"item": [
+		{
+			"name": "user singup",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"jwt\", pm.response.json().token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "full_name",
+							"value": "Avnish singh",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "avi3@test.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile_number",
+							"value": "8521478965",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "avi",
+							"type": "text"
+						},
+						{
+							"key": "about_me",
+							"value": "self motivated",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "job_title",
+							"value": "software developer",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "2005-06-26",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "is_insta_linked",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "insta_userid",
+							"value": "avitomar",
+							"type": "text"
+						},
+						{
+							"key": "privacy_accepted",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "is_gmail_login",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "is_deactive",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "is_otp_verified",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "user_type",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"signup"
+					]
+				},
+				"description": "user registration"
+			},
+			"response": [
+				{
+					"name": "user register success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "full_name",
+									"value": "Avnish Tomar",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "avi1@test.com",
+									"type": "text"
+								},
+								{
+									"key": "contact_number",
+									"value": "8521478965",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "avi",
+									"type": "text"
+								},
+								{
+									"key": "about_me",
+									"value": "self motivated",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "job_title",
+									"value": "software developer",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2005-06-26",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "23",
+									"type": "text"
+								},
+								{
+									"key": "is_insta_linked",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "insta_userid",
+									"value": "avitomar",
+									"type": "text"
+								},
+								{
+									"key": "privacy_accepted",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "576"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"240-NeZnnzaARG94eNdEeXmFH/ENq1s\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 Jun 2022 05:41:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Registration Successfull\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxfSwiaWF0IjoxNjU2NTY3NzA3LCJleHAiOjE2NTY1NzEzMDd9.cTVIOiIC0wPG6GqZL86fGQ3G6tpu1ZvTuMaL9RUTLeU\",\n    \"id\": 1,\n    \"full_name\": \"Avnish Tomar\",\n    \"email\": \"avi1@test.com\",\n    \"contact_number\": \"8521478965\",\n    \"dob\": \"2005-06-26T00:00:00.000Z\",\n    \"age\": 23,\n    \"gender\": \"male\",\n    \"job_title\": \"software developer\",\n    \"about_me\": \"self motivated\",\n    \"privacy_accepted\": true,\n    \"is_insta_linked\": true,\n    \"insta_userid\": \"avitomar\",\n    \"created_at\": \"2022-06-30T05:41:45.901Z\",\n    \"updated_at\": \"2022-06-30T05:41:45.901Z\",\n    \"deleted_on\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "user login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"jwt\", pm.response.json().token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"avi1@test.com\",\r\n\"password\":\"avi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				},
+				"description": "user login"
+			},
+			"response": [
+				{
+					"name": "user login success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "avi1@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "avi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "570"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23a-qPh6FiIwdEwt4bzv/9FSQz33Big\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 Jun 2022 05:44:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"login successfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxfSwiaWF0IjoxNjU2NTY3ODQ0LCJleHAiOjE2NTY1NzE0NDR9.59mBODlZynykvcHae_CIXRwuZ4cWt5NS4rFS68dwBas\",\n    \"id\": 1,\n    \"full_name\": \"Avnish Tomar\",\n    \"email\": \"avi1@test.com\",\n    \"contact_number\": \"8521478965\",\n    \"dob\": \"2005-06-26T00:00:00.000Z\",\n    \"age\": 23,\n    \"gender\": \"male\",\n    \"job_title\": \"software developer\",\n    \"about_me\": \"self motivated\",\n    \"privacy_accepted\": true,\n    \"is_insta_linked\": true,\n    \"insta_userid\": \"avitomar\",\n    \"created_at\": \"2022-06-30T05:41:45.901Z\",\n    \"updated_at\": \"2022-06-30T05:41:45.901Z\",\n    \"deleted_on\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "adminLogin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"jwt\", pm.response.json().token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"avi3@test.com\",\r\n\"password\":\"avi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/adminLogin",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"adminLogin"
+					]
+				},
+				"description": "user login"
+			},
+			"response": [
+				{
+					"name": "user login success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "avi1@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "avi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "570"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23a-qPh6FiIwdEwt4bzv/9FSQz33Big\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 Jun 2022 05:44:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"login successfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxfSwiaWF0IjoxNjU2NTY3ODQ0LCJleHAiOjE2NTY1NzE0NDR9.59mBODlZynykvcHae_CIXRwuZ4cWt5NS4rFS68dwBas\",\n    \"id\": 1,\n    \"full_name\": \"Avnish Tomar\",\n    \"email\": \"avi1@test.com\",\n    \"contact_number\": \"8521478965\",\n    \"dob\": \"2005-06-26T00:00:00.000Z\",\n    \"age\": 23,\n    \"gender\": \"male\",\n    \"job_title\": \"software developer\",\n    \"about_me\": \"self motivated\",\n    \"privacy_accepted\": true,\n    \"is_insta_linked\": true,\n    \"insta_userid\": \"avitomar\",\n    \"created_at\": \"2022-06-30T05:41:45.901Z\",\n    \"updated_at\": \"2022-06-30T05:41:45.901Z\",\n    \"deleted_on\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "sendOtp",
+			"request": {
+				"auth": {
+					"type": "basic"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile_number\":\"918305372451\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/sendOtp",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"sendOtp"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "loginUsingPhone success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phonenumber\":\"918305372451\",\r\n    \"channel\":\"sms\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/phonelogin",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"phonelogin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "695"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b7-I5ErFJwtSDCU5lueFFvwZg40ZiQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Jun 2022 15:47:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Verification is sent!!\",\n    \"phonenumber\": \"918305372451\",\n    \"data\": {\n        \"sid\": \"VEb005f83888d1670b51343b48b2b9ede3\",\n        \"serviceSid\": \"VA1fc86d4c8419a91b3db2572639faf22b\",\n        \"accountSid\": \"ACe2c04973a92f7c555563bd5bfc655ca2\",\n        \"to\": \"+918305372451\",\n        \"channel\": \"sms\",\n        \"status\": \"pending\",\n        \"valid\": false,\n        \"lookup\": {\n            \"carrier\": null\n        },\n        \"amount\": null,\n        \"payee\": null,\n        \"sendCodeAttempts\": [\n            {\n                \"attempt_sid\": \"VL018a6e9e10d50a52f9715b796bcbf8c0\",\n                \"channel\": \"sms\",\n                \"time\": \"2022-06-13T15:47:22.290Z\"\n            }\n        ],\n        \"dateCreated\": \"2022-06-13T15:47:22.000Z\",\n        \"dateUpdated\": \"2022-06-13T15:47:22.000Z\",\n        \"url\": \"https://verify.twilio.com/v2/Services/VA1fc86d4c8419a91b3db2572639faf22b/Verifications/VEb005f83888d1670b51343b48b2b9ede3\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "OtpVerify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile_number\":\"918305372451\",\r\n    \"code\":\"467474\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/isExit",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"isExit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "loginPhoneVerify success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phonenumber\":\"918305372451\",\r\n    \"code\":\"313949\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/phoneverify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"phoneverify"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "383"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17f-ulaqAadYHSzzOGNpwLwzl8wBABA\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Jun 2022 15:52:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"approved\",\n    \"message\": \"User is Verified!!\",\n    \"data\": {\n        \"sid\": \"VEb005f83888d1670b51343b48b2b9ede3\",\n        \"serviceSid\": \"VA1fc86d4c8419a91b3db2572639faf22b\",\n        \"accountSid\": \"ACe2c04973a92f7c555563bd5bfc655ca2\",\n        \"to\": \"+918305372451\",\n        \"channel\": \"sms\",\n        \"status\": \"approved\",\n        \"valid\": true,\n        \"amount\": null,\n        \"payee\": null,\n        \"dateCreated\": \"2022-06-13T15:47:22.000Z\",\n        \"dateUpdated\": \"2022-06-13T15:52:10.000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "full_name",
+							"value": "Avnish",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "avi8@test.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile_number",
+							"value": "8521478966",
+							"type": "text"
+						},
+						{
+							"key": "about_me",
+							"value": "self motivated",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "job_title",
+							"value": "software developer",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "2005-06-25",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "is_insta_linked",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "insta_userid",
+							"value": "avitomar",
+							"type": "text"
+						},
+						{
+							"key": "privacy_accepted",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "is_gmail_login",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "is_deactive",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "is_otp_verified",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/update/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"1"
+					]
+				},
+				"description": "update user using primary key of user"
+			},
+			"response": [
+				{
+					"name": "update user succes",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Deeksha",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Singh",
+									"type": "text"
+								},
+								{
+									"key": "passion",
+									"value": "Drawing",
+									"type": "text"
+								},
+								{
+									"key": "hometown",
+									"value": "dehradun",
+									"type": "text"
+								},
+								{
+									"key": "current_location",
+									"value": "delhi",
+									"type": "text"
+								},
+								{
+									"key": "job",
+									"value": "teacher",
+									"type": "text"
+								},
+								{
+									"key": "about_me",
+									"value": "self obessed",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "9874563214",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "peter26@test.com",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2021/04/26",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/update/26",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"update",
+								"26"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d-K81J4yv4pdOum1SacSaum55oHHA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 08:37:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"profile updated successfully\"\n}"
+				},
+				{
+					"name": "update fail user not found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Deeksha",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Singh",
+									"type": "text"
+								},
+								{
+									"key": "passion",
+									"value": "Drawing",
+									"type": "text"
+								},
+								{
+									"key": "hometown",
+									"value": "dehradun",
+									"type": "text"
+								},
+								{
+									"key": "current_location",
+									"value": "delhi",
+									"type": "text"
+								},
+								{
+									"key": "job",
+									"value": "teacher",
+									"type": "text"
+								},
+								{
+									"key": "about_me",
+									"value": "self obessed",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "9874563214",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "peter26@test.com",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2021/04/26",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/update/2655",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"update",
+								"2655"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "357"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"165-hXaE/qIl92WW0FZQFvAlXJZDHeo\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 08:39:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"fail\",\n    \"error\": {\n        \"code\": 404,\n        \"status\": \"fail\",\n        \"isOperational\": true\n    },\n    \"message\": \"No User found with that ID to update\",\n    \"stack\": \"Error: No User found with that ID to update\\n    at D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\controllers\\\\users.controller.js:118:17\\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get user data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/user/all",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"all"
+					]
+				},
+				"description": "get data of users and data of related tables of users"
+			},
+			"response": [
+				{
+					"name": "get user fail token not provide",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getuser/26",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getuser",
+								"26"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f-bW5yWzjkSzWBHAmncvBQ/vomwsY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 08:40:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Access forbidden.\"\n}"
+				},
+				{
+					"name": "get user data fetched success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getuser/26",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getuser",
+								"26"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-n6dXL+IPo5q255RELESoyMRZ9nI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 08:42:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"data\": {\n            \"id\": 26,\n            \"first_name\": \"Deeksha\",\n            \"last_name\": \"Singh\",\n            \"nickname\": \"Akki\",\n            \"gender_id\": 1,\n            \"about_me\": \"self obessed\",\n            \"passion\": \"Drawing\",\n            \"job\": \"teacher\",\n            \"dob\": null,\n            \"email\": \"peter26@test.com\",\n            \"mobile\": \"9874563214\",\n            \"hometown\": \"dehradun\",\n            \"current_location\": \"delhi\",\n            \"login_type\": \"MANUAL\",\n            \"apple_token\": null,\n            \"is_visible_age\": true,\n            \"is_show_contact\": false,\n            \"is_email_visible\": true,\n            \"is_hometown_visible\": false,\n            \"is_job_visible\": false,\n            \"is_show_initials\": true,\n            \"createdAt\": \"2022-06-09T07:51:17.714Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/user/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get user by id success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getuser/26",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getuser",
+								"26"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "536"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"218-y4Wf8BAXzZlV/+bjeYFHyluyQzs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 10:20:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"data\": {\n            \"id\": 26,\n            \"first_name\": \"Deeksha\",\n            \"last_name\": \"Singh\",\n            \"nickname\": \"Akki\",\n            \"gender_id\": 1,\n            \"about_me\": \"self obessed\",\n            \"passion\": \"Drawing\",\n            \"job\": \"teacher\",\n            \"dob\": null,\n            \"email\": \"peter26@test.com\",\n            \"mobile\": \"9874563214\",\n            \"hometown\": \"dehradun\",\n            \"current_location\": \"delhi\",\n            \"login_type\": \"MANUAL\",\n            \"apple_token\": null,\n            \"is_visible_age\": true,\n            \"is_show_contact\": false,\n            \"is_email_visible\": true,\n            \"is_hometown_visible\": false,\n            \"is_job_visible\": false,\n            \"is_show_initials\": true,\n            \"role\": \"mydbadmin\",\n            \"createdAt\": \"2022-06-09T07:51:17.714Z\"\n        }\n    }\n}"
+				},
+				{
+					"name": "get user by id failed with no data found with that id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getuser/2625",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getuser",
+								"2625"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "380"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17c-LcS2MyZfaTeKgyhp+AkLkdToZ3k\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 10:21:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"fail\",\n    \"error\": {\n        \"code\": 404,\n        \"status\": \"fail\",\n        \"isOperational\": true\n    },\n    \"message\": \"No user data found in database with the given Id\",\n    \"stack\": \"Error: No user data found in database with the given Id\\n    at D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\controllers\\\\users.controller.js:230:7\\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\"\n}"
+				}
+			]
+		},
+		{
+			"name": "user deletion",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/user/delete/4",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"delete",
+						"4"
+					]
+				},
+				"description": "delete user using primary key of user"
+			},
+			"response": [
+				{
+					"name": "user deletion fail no user found with id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/deleteuser/100",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"deleteuser",
+								"100"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "357"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"165-z2lpVT6oCsHDsRKuSOwYFI+wXzw\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 08:43:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"fail\",\n    \"error\": {\n        \"code\": 404,\n        \"status\": \"fail\",\n        \"isOperational\": true\n    },\n    \"message\": \"No user found with that ID to delete\",\n    \"stack\": \"Error: No user found with that ID to delete\\n    at D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\controllers\\\\users.controller.js:246:17\\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\"\n}"
+				},
+				{
+					"name": "user deletion success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/deleteuser/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"deleteuser",
+								"2"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "70"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"46-AZKp4g+0gfdjHF4iq8sqbVYlwJE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 08:44:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": null,\n    \"message\": \"user Successfully deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "user password change",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"current_password\":\"avi\",\r\n\"new_password\":\"avis\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/changePassword/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"changePassword",
+						"1"
+					]
+				},
+				"description": "change password of user using primary key of user"
+			},
+			"response": [
+				{
+					"name": "user password change denied",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currentPassword",
+									"value": "avi",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "avnish",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/changepassword/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"changepassword",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-gWPGAQGI8xCePJgSmV+S6tfvU+o\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:49:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"current pasword wrong\"\n}"
+				},
+				{
+					"name": "user not exist for password change",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currentPassword",
+									"value": "avi",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "avnish",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/changepassword/25",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"changepassword",
+								"25"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-MUA/e8AkBL/yu0cvCnS2SEO817E\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:49:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"user not exist\"\n}"
+				},
+				{
+					"name": "user password change fail wrong token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currentPassword",
+									"value": "avnish",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "avi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/changepassword/26",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"changepassword",
+								"26"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-Rr2jLCXzCMgJ+6UCtgBofAk9otc\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 08:53:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unauthorized access.\"\n}"
+				},
+				{
+					"name": "user password change fail wrong Cpassword",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currentPassword",
+									"value": "avnish",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "avi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/changepassword/26",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"changepassword",
+								"26"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-gWPGAQGI8xCePJgSmV+S6tfvU+o\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 08:55:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"current pasword wrong\"\n}"
+				},
+				{
+					"name": "user password change success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currentPassword",
+									"value": "avi",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "avis",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/changepassword/26",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"changepassword",
+								"26"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-Gmf1hdXPHlFVm5gmUA+H5jL2d54\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 08:56:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"password updated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "addUserDocument",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "file_type",
+							"value": "gallery",
+							"type": "text"
+						},
+						{
+							"key": "sequence_number",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Avnish Tomar/Pictures/Screenshots/download.jfif"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/document/gallery",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"document",
+						"gallery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserDocument",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/document/gallery",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"document",
+						"gallery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserDocumentById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/document/gallery/25",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"document",
+						"gallery",
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserDocument",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "file_type",
+							"value": "gallery",
+							"type": "text"
+						},
+						{
+							"key": "sequence_number",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Avnish Tomar/Pictures/Screenshots/logo.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/document/gallery/2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"document",
+						"gallery",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete usersDocument data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "file_type",
+							"value": "gallery",
+							"type": "text"
+						},
+						{
+							"key": "media_url",
+							"value": "abcdefg",
+							"type": "text"
+						},
+						{
+							"key": "file_extension",
+							"value": ".png",
+							"type": "text"
+						},
+						{
+							"key": "is_primary",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sequence_number",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/document/gallery/32",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"document",
+						"gallery",
+						"32"
+					]
+				},
+				"description": "add data in users_gallery table"
+			},
+			"response": []
+		},
+		{
+			"name": "Wrong API Example",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/NoApiFound",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"NoApiFound"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Wrong API Example failed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/NoApiFound",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"NoApiFound"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1408"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"580-1bG6KoYyBekUdF5dDNM7wsTkTZ4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 13:18:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"error\": {\n        \"code\": 500,\n        \"status\": \"error\",\n        \"isOperational\": true\n    },\n    \"message\": \"cant found the /api/NoApiFound on this server\",\n    \"stack\": \"Error: cant found the /api/NoApiFound on this server\\n    at D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\app.js:38:10\\n    at Layer.handle [as handle_request] (D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:137:13)\\n    at next (D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:131:14)\\n    at next (D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:131:14)\\n    at next (D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:131:14)\\n    at next (D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:131:14)\\n    at next (D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:131:14)\\n    at next (D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:131:14)\\n    at next (D:\\\\Raysteeds_infotech\\\\Yall-Project\\\\ray.yall.backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:131:14)\"\n}"
+				}
+			]
+		},
+		{
+			"name": "addPreferences",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user_id\":1,\r\n\"show_initial_name\":true,\r\n\"show_email\":true,\r\n\"show_job_title\":true,\r\n\"show_age\":true,\r\n\"show_contact\":true,\r\n\"show_on_yall\":true,\r\n\"age_range_min\":10,\r\n\"age_range_max\":40,\r\n\"distance_range\":100,\r\n\"distance_type\":\"km\",\r\n\"profile_percentage\":100,\r\n\"interested_in\":\"women\",\r\n\"lat\":26.2124,\r\n\"long\":78.1772\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/preferences/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"preferences",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPreferences",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseUrl}}/preferences/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"preferences",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPreferencesByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/preferences/user/3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"preferences",
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePreferences",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user_id\":1,\r\n\"show_initial_name\":true,\r\n\"show_email\":true,\r\n\"show_job_title\":true,\r\n\"show_age\":true,\r\n\"show_contact\":true,\r\n\"show_on_yall\":true,\r\n\"age_range_min\":100,\r\n\"age_range_max\":100,\r\n\"distance_range\":100,\r\n\"distance_type\":\"km\",\r\n\"profile_percentage\":100,\r\n\"interested_in\":\"men\",\r\n\"lat\":22.7196,\r\n\"long\":75.8577\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/preferences/user/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"preferences",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateLocation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"current_city\":\"gwalior\",\r\n    \"lat\":\"26.2124\",\r\n    \"long\":\"78.1772\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/updateLocation/2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"updateLocation",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUserPreferences",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/preferences/user/2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"preferences",
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddInterestCategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\":\"Films and Tv\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/interest/category",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllInterestCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/interest/category",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInterestcategoryById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/interest/category/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateInterestCategory",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\":\"pets\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/interest/category/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteInterestCategory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/interest/category/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCategoryValue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"interest_category_id\":\"7\",\r\n     \"value\":\"3 Idiots movie\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/interest/value",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"value"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCategoryValues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/interest/value",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"value"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategoryValueById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/interest/value/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"value",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCategoryValue",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"interest_category_id\":\"1\",\r\n     \"value\":\"Sweety\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/interest/value/2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"value",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCategoryValue",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/interest/value/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"value",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUserInterest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"3\",\r\n     \"interest_value_id\":\"19\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/interest/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUserInterests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/interest/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserInterestsById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/interest/user/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserInterests",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"1\",\r\n     \"interest_value_id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/interest/user/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserInterest",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/interest/user/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"interest",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSetPreferences",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/setPreferences?age_range_min=18&age_range_max=40&distance_range=1&distance_type=km&lat=26.2124&long=78.1772&interested_in=women",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"setPreferences"
+					],
+					"query": [
+						{
+							"key": "age_range_min",
+							"value": "18"
+						},
+						{
+							"key": "age_range_max",
+							"value": "40"
+						},
+						{
+							"key": "distance_range",
+							"value": "1"
+						},
+						{
+							"key": "distance_type",
+							"value": "km"
+						},
+						{
+							"key": "lat",
+							"value": "26.2124"
+						},
+						{
+							"key": "long",
+							"value": "78.1772"
+						},
+						{
+							"key": "interested_in",
+							"value": "women"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addEvents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "front_banner_url",
+							"type": "file",
+							"src": "/C:/Users/Avnish Tomar/Pictures/Screenshots/download (1).jfif"
+						},
+						{
+							"key": "cover_banner_url",
+							"type": "file",
+							"src": "/C:/Users/Avnish Tomar/Pictures/Screenshots/logo.png"
+						},
+						{
+							"key": "title",
+							"value": "wed night",
+							"type": "text"
+						},
+						{
+							"key": "slug_url",
+							"value": "abcde",
+							"type": "text"
+						},
+						{
+							"key": "event_type_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "cost",
+							"value": "555.50",
+							"type": "text"
+						},
+						{
+							"key": "currency",
+							"value": "rupees",
+							"type": "text"
+						},
+						{
+							"key": "short_desc",
+							"value": "this is short desc",
+							"type": "text"
+						},
+						{
+							"key": "long_desc",
+							"value": "this is long desc",
+							"type": "text"
+						},
+						{
+							"key": "event_on",
+							"value": "2018-03-29T13:34:00.000",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "26.2124",
+							"type": "text"
+						},
+						{
+							"key": "long",
+							"value": "78.1772",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/events",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllEvents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/events",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEventById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/event?slug_url=abcde",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"event"
+					],
+					"query": [
+						{
+							"key": "slug_url",
+							"value": "abcde"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEvent",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "wednesday night",
+							"type": "text"
+						},
+						{
+							"key": "slug_url",
+							"value": "abcdef",
+							"type": "text"
+						},
+						{
+							"key": "event_type_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cost",
+							"value": "525.50",
+							"type": "text"
+						},
+						{
+							"key": "currency",
+							"value": "rupees",
+							"type": "text"
+						},
+						{
+							"key": "short_desc",
+							"value": "this is short desc",
+							"type": "text"
+						},
+						{
+							"key": "long_desc",
+							"value": "this is long desc",
+							"type": "text"
+						},
+						{
+							"key": "event_on",
+							"value": "2022-08-15",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "25.5940947",
+							"type": "text"
+						},
+						{
+							"key": "long",
+							"value": "85.1375645",
+							"type": "text"
+						},
+						{
+							"key": "front_banner_url",
+							"type": "file",
+							"src": "/C:/Users/Avnish Tomar/Pictures/Screenshots/download (1).jfif"
+						},
+						{
+							"key": "cover_banner_url",
+							"type": "file",
+							"src": "/C:/Users/Avnish Tomar/Pictures/Screenshots/logo.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/event/18",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"event",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEvent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/event/2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"event",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addEventType",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Discover Dates",
+							"type": "text"
+						},
+						{
+							"key": "banner_url",
+							"type": "file",
+							"src": "/C:/Users/Avnish Tomar/Pictures/Screenshots/logo.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/eventType",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"eventType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllEventType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/eventType",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"eventType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addEventType",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Discover Dates",
+							"type": "text"
+						},
+						{
+							"key": "banner_url",
+							"type": "file",
+							"src": "/C:/Users/Avnish Tomar/Pictures/Screenshots/logo.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/eventType",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"eventType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEventTypeById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/eventType/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"eventType",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEventType",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "wednesday nights",
+							"type": "text"
+						},
+						{
+							"key": "banner_url",
+							"type": "file",
+							"src": "/C:/Users/Avnish Tomar/Pictures/Screenshots/download.jfif"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/eventType/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"eventType",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEventType",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/eventType/2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"eventType",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addEventBooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user_id\":1,\r\n\"event_id\":1,\r\n\"payment_card_id\":1,\r\n\"seat_number\":\"21A\",\r\n\"amount\":550.50,\r\n\"payment_id\":\"1\",\r\n\"payment_method\":\"debit\",\r\n\"payment_status\":\"pending\",\r\n\"booking_status\":\"initiated\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/eventBooking",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"eventBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllEventBooking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/eventBooking",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"eventBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEventBookingById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/eventBooking/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"eventBooking",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEventBooking",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"payment_method\":\"credit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/eventBooking/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"eventBooking",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEventBooking",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/eventBooking/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"eventBooking",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPaymentCards",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":2,\r\n    \"card_number\":\"789456318529632\",\r\n    \"card_type\":\"debit\",\r\n    \"cvv\":144,\r\n    \"card_expiry\":\"2005-05-26\",\r\n    \"bank_name\":\"SBI\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/paymentCards",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"paymentCards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPaymentCards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paymentCards",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"paymentCards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPaymentCardById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paymentCard/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"paymentCard",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePaymentCard",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"card_number\":\"789456318529633\",\r\n    \"card_type\":\"credit\",\r\n    \"cvv\":145,\r\n    \"card_expiry\":\"2005-05-25\",\r\n    \"bank_name\":\"CBI\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/paymentCard/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"paymentCard",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePaymentCard",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paymentCard/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"paymentCard",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPrompt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\":\"what is yall\",\r\n    \"type\":\"basic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/prompts",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"prompts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPrompts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/prompts",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"prompts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPromptById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/prompt/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"prompt",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePrompt",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\":\"what yall for\",\r\n    \"type\":\"about\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/prompt/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"prompt",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePrompt",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/prompt/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"prompt",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUserPrompts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":1,\r\n    \"prompt_id\":1,\r\n    \"prompt_answer\":\"yall is a dating app\",\r\n    \"sequence_number\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/userPrompts",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"userPrompts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAlluserPromptById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/userPrompt/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"userPrompt",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
